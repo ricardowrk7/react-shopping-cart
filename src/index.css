@@ -59,7 +59,7 @@ footer{
 .sidebar{
   flex:1;
 
-  background-color: olivedrab;
+  background-color: rgb(222, 235, 198);
 }
 a img{
   height: 378px;
@@ -150,4 +150,30 @@ font-size: 17px;
   display:flex ;
   justify-content: space-between;
 }
+.input{
+  border: 2px solid #b3b3d6;
+    border-radius: 5px;
+    padding: 4px;
+
+}
+
+.form-container{
+  padding: 0px;
+  margin: 0px;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.form-container > li{
+  display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 70%;
+
+}
+
+
+
 

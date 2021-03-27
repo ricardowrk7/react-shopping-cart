@@ -13,6 +13,9 @@ class App extends Component {
       sort: "",
     };
   }
+  createOrder=(order)=>{
+    console.log(order.name)
+  }
 
   addToCart=(product)=>{
     const updatedCartItem = [...this.state.cartItems];
@@ -101,7 +104,7 @@ class App extends Component {
                
               />
             </div>
-            <div className="sidebar"> <CartItems removeHandler={this.removeHandler} cartItems={this.state.cartItems}/></div>
+            <div className="sidebar"> <CartItems createOrder={this.createOrder} removeHandler={this.removeHandler} cartItems={this.state.cartItems}/></div>
           </div>
         </main>
         <footer>All right is reserved.</footer>
