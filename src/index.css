@@ -112,3 +112,42 @@ font-size: 17px;
   padding: 5px;
   flex: 1;
 }
+.cart-header{
+  margin-top: 15px;
+  text-align: center;
+  border-bottom: 2px #8aceec solid;
+  padding: 11px;
+}
+
+.image img{
+  width: 71px;
+}
+
+.cart-items{
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+ 
+  margin: 10px;
+}
+.title-button{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.remove-button{
+  display: flex;
+  justify-content: space-around;
+}
+.div-price{
+  margin: 10px;
+  display:flex ;
+  justify-content: space-between;
+}
+
