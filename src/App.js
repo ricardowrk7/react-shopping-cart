@@ -1,6 +1,7 @@
 import data from "./data.json";
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Products from "./components/Products";
+import Filter from "./components/Filter";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -9,6 +10,38 @@ class App extends Component {
       size: "",
       sort: "",
     };
+  }
+  sortproducts=(e)=>{
+    
+   const sort=e.target.value
+   this.setState(state=>({
+     sort:sort,
+     products:this.state.products.slice().sort((a,b)=>(
+       sort==="lowest"?
+      ((a.price<b.price)? -1:1):
+      sort==="highest"? ((a.price<b.price)? +1:-1):((a._id<b._id)? -1:1)
+       
+     ))
+   }))
+  
+   
+  }
+  filterproducts=(e)=>{
+    // console.log(e.target.value)
+    if(e.target.value===""){
+      this.setState({
+        products:data.products,
+        size:e.target.value
+      })
+    }else{
+      this.setState({
+        size:e.target.value,
+        products:data.products.filter(x=>x.availableSizes.indexOf(e.target.value) >= 0)
+      })
+
+    }
+   
+
   }
   render() {
     return (
@@ -19,7 +52,14 @@ class App extends Component {
         <main>
           <div className="content">
             <div className="main">
-              <Products products={this.state.products}/>
+              <Filter
+                count={this.state.products.length}
+                size={this.state.size}
+                sort={this.state.sort}
+                filterproducts={this.filterproducts}
+                sortproducts={this.sortproducts}
+              />
+              <Products products={this.state.products} />
             </div>
             <div className="sidebar"> cart items</div>
           </div>
