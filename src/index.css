@@ -173,6 +173,23 @@ font-size: 17px;
     width: 70%;
 
 }
+.product-detailes{
+  display: flex;
+ justify-content: space-around;
+}
+
+.product-discriptopn{
+  text-align: center;
+}
+.remove-modal{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.modal-image{
+  height: 463px;
+}
 
 
 
