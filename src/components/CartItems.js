@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Fade from "react-reveal/Fade"
 import dress1 from "../images/dress1.jpg";
 import dress2 from "../images/dress2.jpg";
 import dress3 from "../images/dress3.jpg";
@@ -48,7 +49,8 @@ export default class CartItems extends Component {
           </div>
         )}
         <div className="cart">
-          <ul className="cart-items">
+         <Fade left cascade>
+         <ul className="cart-items">
             {cartItems.map((item) => (
               <li key={item._id}>
                 <div className="image">
@@ -68,6 +70,7 @@ export default class CartItems extends Component {
               </li>
             ))}
           </ul>
+         </Fade>
         </div>
         {cartItems.length !== 0 && (
           <div>
@@ -83,7 +86,9 @@ export default class CartItems extends Component {
             </div>
             {this.state.showCheckOut && (
               <div>
-                <form onSubmit={this.createOrder}>
+                   <form onSubmit={this.createOrder}>
+                <Fade right cascade>
+               
                   <ul className="form-container">
                     <li>
                       <label>Email</label>
@@ -119,6 +124,8 @@ export default class CartItems extends Component {
                       <button type="submit">Checkout</button>
                     </li>
                   </ul>
+                
+                </Fade>
                 </form>
               </div>
             )}
