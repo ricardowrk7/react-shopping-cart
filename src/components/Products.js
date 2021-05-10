@@ -39,7 +39,7 @@ export default class Products extends Component {
               <li key={product._id}>
                 <div className="product">
                   <a onClick={() => this.openModal(product)} href="#">
-                    <img src={images[product.image]} alt="image" />
+                    <img src={images[product.image]} alt="product" />
                     <p>{product.title}</p>
                   </a>
                   <div className="product-price">
@@ -62,7 +62,7 @@ export default class Products extends Component {
               
               <button onClick={this.closeModal} className="remove-modal">remove</button>
               <div className="product-detailes">
-                <img className="modal-image" src={images[product.image]} alt="image" />
+                <img className="modal-image" src={images[product.image]} alt="product" />
                 <div className="product-discriptopn">
                   <h2>{product.title}</h2>
                   <p>{product.description}</p>

@@ -54,7 +54,7 @@ export default class CartItems extends Component {
             {cartItems.map((item) => (
               <li key={item._id}>
                 <div className="image">
-                  <img src={images[item._id]}  alt="image" ></img>
+                  <img src={images[item._id]}  alt="product" ></img>
                 </div>
                 <div className="title-button">
                   <div>{item.title}</div>
